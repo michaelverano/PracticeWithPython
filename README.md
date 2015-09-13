@@ -1,2 +1,2 @@
 # PracticeWithPython
-Simple scripts written in Python to practice programming.
+Simple scripts I've written in Python to practice.

@@ -1,0 +1,22 @@
+
+#untracked folders
+#!*/
+
+#untracked files
+*.txt
+*.txt~
+*.zip
+*.db
+*
+*/
+!*.*
+*.html
+view-source_www1.umn.edu_humanrts_peace_senate.txt
+*.zip
+Searched_.py_files_*
+Searched_.txt_files_*
+*.csv
+Secret*
+hello*
+*books.txt
+sonnet*

@@ -3,13 +3,13 @@
 #	I wrote this so I don't have to keep writing this on programs working
 #	with the operating system.
 
-# 	Doesn't work as intented when imported into another program. Fix dis.
 import os
 
+# 	Doesn't work as intented when imported into another program. Fix dis.
 def directoryExplorer(current_directory):
 	
-	move_backwards = current_directory.split(os.sep)
-	move_forwards = next(os.walk(current_directory))[1] # Learn how this works
+	#move_backwards = current_directory.split(os.sep)
+	move_forwards = next(os.walk(current_directory))[1]
 
 	print('\nThis is your current directory: ' + current_directory)
 	print('These are the folders available in your current directory: ' + str(os.path.basename(current_directory)))
@@ -25,23 +25,24 @@ def directoryExplorer(current_directory):
 	if go_to.lower() == 'back': #Move Back
 		print('Moving backwards to ' + os.path.split(os.getcwd())[0])
 		new_path = os.path.split(os.getcwd())[0] 
+		print(new_path)
 		os.chdir(new_path)
-		directoryExplorer()
+		directoryExplorer(new_path)
 	elif go_to in move_forwards: # Move Forwards
 		print('moving forwards to ' + str(go_to))
 		new_path = os.getcwd() + '/'+ go_to
 		os.chdir(new_path)
-		directoryExplorer()
+		directoryExplorer(new_path)
 	elif go_to.lower() == 'stay': # Stay
 		print('Staying in this directory.')
 	elif go_to.lower() == 'exit':
 		exit()
 	else: # Exit program
 		print('That is not an option')
-		directoryExplorer()
+		directoryExplorer(current_directory)
 
 
 
 if __name__ == '__main__':
 	current_directory = os.getcwd()
-	directoryExplorer(directory)
+	directoryExplorer(current_directory)

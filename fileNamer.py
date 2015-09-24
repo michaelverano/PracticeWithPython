@@ -30,8 +30,8 @@ def fileNamer():
 	print('No more file names that match your search.')
 
 if __name__ == '__main__':
-	#import directoryExplorer
-	#directoryExplorer.directoryExplorer(os.getcwd())
-	os.chdir(os.getcwd()+'/fileNamer test/') # for testing porpoises.
+	import directoryExplorer
+	directoryExplorer.directoryExplorer(os.getcwd())
+	#os.chdir(os.getcwd()+'/fileNamer test/') # for testing porpoises.
 
 	fileNamer()

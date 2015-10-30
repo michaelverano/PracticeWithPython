@@ -36,6 +36,7 @@ def multiplicationTable(multiplier):
 			sheet[get_column_letter(columns) + str(rows)] = formula
 	logging.debug('Multiplication table made...')
 
+	# Save into a worksheet.
 	wb.save('multiplicationTable.xlsx')
 	print('\n\nMultiplication table saved.')
 
